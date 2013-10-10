@@ -7,18 +7,31 @@
 //
 
 #import "CLAppDelegate.h"
+#import "CLWeatherViewController.h"
+#import "CLForecastViewController.h"
+#import "CLLocationsViewController.h"
+@interface CLAppDelegate ()
+@property (strong, nonatomic) IIViewDeckController *viewDeckController;
+@end
 
 @implementation CLAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Initialize View Controllers
+    CLLocationsViewController *leftViewController = [[CLLocationsViewController alloc] initWithNibName:@"CLLocationsViewController" bundle:nil];
+    CLForecastViewController *rightViewController = [[CLForecastViewController alloc] initWithNibName:@"CLForecastViewController" bundle:nil];
+    CLWeatherViewController *centerViewController = [[CLWeatherViewController alloc] initWithNibName:@"CLWeatherViewController" bundle:nil];
+    // Configure Locations View Controller
+    [leftViewController setDelegate:centerViewController];
+    // Initialize View Deck Controller
+    self.viewDeckController = [[IIViewDeckController alloc] initWithCenterViewController:centerViewController leftViewController:leftViewController rightViewController:rightViewController];
+    // Initialize Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    // Configure Window
+    [self.window setRootViewController:self.viewDeckController];
     [self.window makeKeyAndVisible];
     return YES;
 }
-
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
