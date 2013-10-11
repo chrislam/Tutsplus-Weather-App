@@ -21,3 +21,6 @@ NSString * const CLLocationKeyCity = @"city";
 NSString * const CLLocationKeyCountry = @"country";
 NSString * const CLLocationKeyLatitude = @"latitude";
 NSString * const CLLocationKeyLongitude = @"longitude";
+#pragma mark -
+#pragma mark Forecast API
+NSString * const MTForecastAPIKey = @"1b358abacf974c59bb2aa321148efa1f";

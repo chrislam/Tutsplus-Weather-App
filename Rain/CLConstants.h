@@ -20,3 +20,6 @@ extern NSString * const CLLocationKeyCity;
 extern NSString * const CLLocationKeyCountry;
 extern NSString * const CLLocationKeyLatitude;
 extern NSString * const CLLocationKeyLongitude;
+#pragma mark -
+#pragma mark Forecast API
+extern NSString * const CLForecastAPIKey;

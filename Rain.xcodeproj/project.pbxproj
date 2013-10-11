@@ -19,6 +19,7 @@
 		3B6EFCD0180539EC0085EDF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6EFCB8180539EC0085EDF9 /* UIKit.framework */; };
 		3B6EFCD8180539EC0085EDF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EFCD6180539EC0085EDF9 /* InfoPlist.strings */; };
 		3B6EFCDA180539EC0085EDF9 /* RainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EFCD9180539EC0085EDF9 /* RainTests.m */; };
+		3BA232481807CF5C00310887 /* CLForecastClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA232471807CF5C00310887 /* CLForecastClient.m */; };
 		3BF8DE591806801E003287EE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE581806801E003287EE /* MobileCoreServices.framework */; };
 		3BF8DE5B1806802E003287EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE5A1806802E003287EE /* SystemConfiguration.framework */; };
 		3BF8DE5D18068033003287EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE5C18068033003287EE /* QuartzCore.framework */; };
@@ -62,6 +63,8 @@
 		3B6EFCD5180539EC0085EDF9 /* RainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RainTests-Info.plist"; sourceTree = "<group>"; };
 		3B6EFCD7180539EC0085EDF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B6EFCD9180539EC0085EDF9 /* RainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RainTests.m; sourceTree = "<group>"; };
+		3BA232461807CF5C00310887 /* CLForecastClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLForecastClient.h; sourceTree = "<group>"; };
+		3BA232471807CF5C00310887 /* CLForecastClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLForecastClient.m; sourceTree = "<group>"; };
 		3BF8DE581806801E003287EE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3BF8DE5A1806802E003287EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3BF8DE5C18068033003287EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -153,6 +156,8 @@
 				3B6EFCBB180539EC0085EDF9 /* Supporting Files */,
 				3BF8DE7618074438003287EE /* CLConstants.h */,
 				3BF8DE7718074438003287EE /* CLConstants.m */,
+				3BA232461807CF5C00310887 /* CLForecastClient.h */,
+				3BA232471807CF5C00310887 /* CLForecastClient.m */,
 			);
 			path = Rain;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				3BF8DE7818074438003287EE /* CLConstants.m in Sources */,
 				3B6EFCC1180539EC0085EDF9 /* main.m in Sources */,
 				3BF8DE6F180683E8003287EE /* CLLocationsViewController.m in Sources */,
+				3BA232481807CF5C00310887 /* CLForecastClient.m in Sources */,
 				3BF8DE6A180683CF003287EE /* CLForecastViewController.m in Sources */,
 				3B6EFCC5180539EC0085EDF9 /* CLAppDelegate.m in Sources */,
 				3BF8DE741806845C003287EE /* CLWeatherViewController.m in Sources */,
