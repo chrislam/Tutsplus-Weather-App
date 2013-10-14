@@ -23,3 +23,4 @@ extern NSString * const CLLocationKeyLongitude;
 #pragma mark -
 #pragma mark Forecast API
 extern NSString * const CLForecastAPIKey;
+extern NSString * const CLRainReachabilityStatusDidChangeNotification;

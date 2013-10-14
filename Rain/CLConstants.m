@@ -23,4 +23,5 @@ NSString * const CLLocationKeyLatitude = @"latitude";
 NSString * const CLLocationKeyLongitude = @"longitude";
 #pragma mark -
 #pragma mark Forecast API
-NSString * const MTForecastAPIKey = @"1b358abacf974c59bb2aa321148efa1f";
+NSString * const CLForecastAPIKey = @"1b358abacf974c59bb2aa321148efa1f";
+NSString * const CLRainReachabilityStatusDidChangeNotification = @"com.chrisLam.CLRainReachabilityStatusDidChangeNotification";

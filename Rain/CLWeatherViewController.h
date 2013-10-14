@@ -11,4 +11,5 @@
 
 @interface CLWeatherViewController : UIViewController <CLLocationsViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *labelLocation;
+@property (weak, nonatomic) IBOutlet UIButton *buttonRefresh;
 @end

@@ -7,9 +7,12 @@
 //
 
 #import "AFHTTPClient.h"
-
+typedef void (^CLForecastClientCompletionBlock)(BOOL success, NSDictionary *response);
 @interface CLForecastClient : AFHTTPClient
 #pragma mark -
 #pragma mark Shared Client
 + (CLForecastClient *)sharedClient;
+#pragma mark -
+#pragma mark Instance Methods
+- (void)requestWeatherForCoordinate:(CLLocationCoordinate2D)coordinate completion:(CLForecastClientCompletionBlock)completion;
 @end

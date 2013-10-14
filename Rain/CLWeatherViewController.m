@@ -7,6 +7,7 @@
 //
 
 #import "CLWeatherViewController.h"
+#import "CLForecastClient.h"
 
 @interface CLWeatherViewController () <CLLocationManagerDelegate> {
     BOOL _locationFound;
@@ -26,6 +27,10 @@
         // Configure Location Manager
         [self.locationManager setDelegate:self];
         [self.locationManager setDesiredAccuracy:kCLLocationAccuracyKilometer];
+        // Add Observer
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        [nc addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+        [nc addObserver:self selector:@selector(reachabilityStatusDidChange:) name:CLRainReachabilityStatusDidChangeNotification object:nil];
     }
     return self;
 }
@@ -110,12 +115,52 @@
         [[NSNotificationCenter defaultCenter] postNotification:notification1];
         // Update View
         [self updateView];
+        // Request Location
+        [self fetchWeatherData];
     }
 }
 
 - (void)updateView {
     // Update Location Label
     [self.labelLocation setText:[self.location objectForKey:CLLocationKeyCity]];
+}
+
+- (void)fetchWeatherData {
+    if ([[CLForecastClient sharedClient] networkReachabilityStatus] == AFNetworkReachabilityStatusNotReachable) return;
+    // Show Progress HUD
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    // Query Forecast API
+    double lat = [[_location objectForKey:CLLocationKeyLatitude] doubleValue];
+    double lng = [[_location objectForKey:CLLocationKeyLongitude] doubleValue];
+    [[CLForecastClient sharedClient] requestWeatherForCoordinate:CLLocationCoordinate2DMake(lat, lng) completion:^(BOOL success, NSDictionary *response) {
+        // Dismiss Progress HUD
+        [SVProgressHUD dismiss];
+        NSLog(@"Response > %@", response);
+    }];
+}
+
+- (void)dealloc {
+    // Remove Observer
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)reachabilityStatusDidChange:(NSNotification *)notification {
+    CLForecastClient *forecastClient = [notification object];
+    NSLog(@"Reachability Status > %i", forecastClient.networkReachabilityStatus);
+    // Update Refresh Button
+    self.buttonRefresh.enabled = (forecastClient.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable);
+}
+
+- (void)applicationDidBecomeActive:(NSNotification *)notification {
+    if (self.location) {
+        [self fetchWeatherData];
+    }
+}
+
+- (IBAction)refresh:(id)sender {
+    if (self.location) {
+        [self fetchWeatherData];
+    }
 }
 
 @end
