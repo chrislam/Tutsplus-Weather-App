@@ -13,6 +13,8 @@
     BOOL _locationFound;
 }
 @property (strong, nonatomic) NSDictionary *location;
+@property (strong, nonatomic) NSDictionary *response;
+@property (strong, nonatomic) NSArray *forecast;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
 
@@ -31,6 +33,8 @@
         NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
         [nc addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
         [nc addObserver:self selector:@selector(reachabilityStatusDidChange:) name:CLRainReachabilityStatusDidChangeNotification object:nil];
+        [nc addObserver:self selector:@selector(weatherDataDidChangeChange:) name:CLRainWeatherDataDidChangeChangeNotification object:nil];
+        [nc addObserver:self selector:@selector(temperatureUnitDidChange:) name:CLRainTemperatureUnitDidChangeNotification object:nil];
     }
     return self;
 }
@@ -161,6 +165,23 @@
     if (self.location) {
         [self fetchWeatherData];
     }
+}
+
+- (void)weatherDataDidChangeChange:(NSNotification *)notification {
+    // Update Response & Forecast
+    [self setResponse:[notification userInfo]];
+    [self setForecast:self.response[@"hourly"][@"data"]];
+    // Update View
+    [self updateView];
+}
+
+- (void)temperatureUnitDidChange:(NSNotification *)notification {
+    // Update View
+    [self updateView];
+}
+
+- (IBAction)openLeftView:(id)sender {
+    [self.viewDeckController toggleLeftViewAnimated:YES];
 }
 
 @end

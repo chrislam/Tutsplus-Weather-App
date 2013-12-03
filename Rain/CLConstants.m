@@ -15,6 +15,8 @@ NSString * const CLRainUserDefaultsLocations = @"locations";
 #pragma mark Notifications
 NSString * const CLRainDidAddLocationNotification = @"com.mobileTuts.CLRainDidAddLocationNotification";
 NSString * const CLRainLocationDidChangeNotification = @"com.mobileTuts.CLRainLocationDidChangeNotification";
+NSString * const CLRainWeatherDataDidChangeChangeNotification = @"com.chrisLam.CLRainWeatherDataDidChangeChangeNotification";
+NSString * const CLRainTemperatureUnitDidChangeNotification = @"com.chrisLam.CLRainTemperatureUnitDidChangeNotification";
 #pragma mark -
 #pragma mark Location Keys
 NSString * const CLLocationKeyCity = @"city";

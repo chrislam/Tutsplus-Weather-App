@@ -14,6 +14,8 @@ extern NSString * const CLRainUserDefaultsLocations;
 #pragma mark Notifications
 extern NSString * const CLRainDidAddLocationNotification;
 extern NSString * const CLRainLocationDidChangeNotification;
+extern NSString * const CLRainWeatherDataDidChangeChangeNotification;
+extern NSString * const CLRainTemperatureUnitDidChangeNotification;
 #pragma mark -
 #pragma mark Location Keys
 extern NSString * const CLLocationKeyCity;
