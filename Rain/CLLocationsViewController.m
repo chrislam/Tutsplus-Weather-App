@@ -81,7 +81,42 @@ static NSString *LocationCell = @"LocationCell";
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 0) {
+        return NO;
+    }
+    // Fetch Location
+    NSDictionary *location = [self.locations objectAtIndex:(indexPath.row - 1)];
+    return ![self isCurrentLocation:location];
+}
+
+- (BOOL)isCurrentLocation:(NSDictionary *)location {
+    // Fetch Current Location
+    NSDictionary *currentLocation = [[NSUserDefaults standardUserDefaults] objectForKey:CLRainUserDefaultsLocation];
+    if ([location[CLLocationKeyLatitude] doubleValue] == [currentLocation[CLLocationKeyLatitude] doubleValue] &&
+        [location[CLLocationKeyLongitude] doubleValue] == [currentLocation[CLLocationKeyLongitude] doubleValue]) {
+        return YES;
+    }
     return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Update Locations
+        [self.locations removeObjectAtIndex:(indexPath.row - 1)];
+        // Update User Defaults
+        [[NSUserDefaults standardUserDefaults] setObject:self.locations forKey:CLRainUserDefaultsLocations];
+        // Update Table View
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    }
+}
+
+- (IBAction)editLocations:(id)sender {
+    [self.tableView setEditing:![self.tableView isEditing] animated:YES];
+    NSString *editButtonTitle = @"Edit";
+    if ([self.tableView isEditing]) {
+        editButtonTitle = @"Done";
+    }
+    [self.editButton setTitle:(editButtonTitle)];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath

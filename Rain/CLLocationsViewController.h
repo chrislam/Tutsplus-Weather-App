@@ -11,6 +11,7 @@
 @interface CLLocationsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) id<CLLocationsViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 @end
 @protocol CLLocationsViewControllerDelegate <NSObject>
 - (void)controllerShouldAddCurrentLocation:(CLLocationsViewController *)controller;
