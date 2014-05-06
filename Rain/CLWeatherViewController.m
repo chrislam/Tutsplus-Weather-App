@@ -8,6 +8,7 @@
 
 #import "CLWeatherViewController.h"
 #import "CLForecastClient.h"
+#import "CLHourCell.h"
 
 @interface CLWeatherViewController () <CLLocationManagerDelegate> {
     BOOL _locationFound;
@@ -17,6 +18,8 @@
 @property (strong, nonatomic) NSArray *forecast;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
+
+static NSString *HourCell = @"HourCell";
 
 @implementation CLWeatherViewController
 
@@ -42,11 +45,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Load Location
     self.location = [[NSUserDefaults standardUserDefaults] objectForKey:CLRainUserDefaultsLocation];
+    
     if (!self.location) {
         [self.locationManager startUpdatingLocation];
     }
+    
+    // Configure Collection View
+    [self.collectionView setBackgroundColor:[UIColor clearColor]];
+    [self.collectionView registerClass:[CLHourCell class] forCellWithReuseIdentifier:HourCell];
 }
 
 - (void)didReceiveMemoryWarning
@@ -127,6 +136,12 @@
 - (void)updateView {
     // Update Location Label
     [self.labelLocation setText:[self.location objectForKey:CLLocationKeyCity]];
+    
+    // Update Current Weather
+    [self updateCurrentWeather];
+    
+    // Reload Collection View
+    [self.collectionView reloadData];
 }
 
 - (void)fetchWeatherData {
@@ -139,7 +154,14 @@
     [[CLForecastClient sharedClient] requestWeatherForCoordinate:CLLocationCoordinate2DMake(lat, lng) completion:^(BOOL success, NSDictionary *response) {
         // Dismiss Progress HUD
         [SVProgressHUD dismiss];
-        NSLog(@"Response > %@", response);
+        
+        if (response && [response isKindOfClass:[NSDictionary class]]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // Post Notification on Main Thread
+                NSNotification *notification = [NSNotification notificationWithName:CLRainWeatherDataDidChangeChangeNotification object:nil userInfo:response];
+                [[NSNotificationCenter defaultCenter] postNotification:notification];
+            });
+        }
     }];
 }
 
@@ -182,6 +204,81 @@
 
 - (IBAction)openLeftView:(id)sender {
     [self.viewDeckController toggleLeftViewAnimated:YES];
+}
+
+- (void)updateCurrentWeather {
+    // Weather Data
+    NSDictionary *data = [self.response objectForKey:@"currently"];
+    
+    // Update Date Label
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [dateFormatter setDateFormat:@"EEEE, MMM d"];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[data[@"time"] doubleValue]];
+    [self.labelDate setText:[dateFormatter stringFromDate:date]];
+    
+    // Update Temperature Label
+    [self.labelTemp setText:[CLSettings formatTemperature:data[@"temperature"]]];
+    
+    // Update Time Label
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
+    [timeFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [timeFormatter setDateFormat:@"ha"];
+    [self.labelTime setText:[timeFormatter stringFromDate:[NSDate date]]];
+    
+    // Update Wind Label
+    [self.labelWind setText:[NSString stringWithFormat:@"%.0fMP", [data[@"windSpeed"] floatValue]]];
+    
+    // Update Rain Label
+    float rainProbability = 0.0;
+    if (data[@"precipProbability"]) {
+        rainProbability = [data[@"precipProbability"] floatValue] * 100.00;
+    }
+    
+    [self.labelRain setText:[NSString stringWithFormat:@"%.0f%%", rainProbability]];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return self.forecast ? 1 : 0;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.forecast count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CLHourCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:HourCell forIndexPath:indexPath];
+    
+    // Fetch Data
+    NSDictionary *data = [self.forecast objectAtIndex:indexPath.row];
+    
+    // Initialize Date Formatter
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
+    [timeFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [timeFormatter setDateFormat:@"ha"];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[data[@"time"] doubleValue]];
+    
+    // Configure Cell
+    [cell.labelTime setText:[timeFormatter stringFromDate:date]];
+    [cell.labelTemp setText:[CLSettings formatTemperature:data[@"temperature"]]];
+    [cell.labelWind setText:[NSString stringWithFormat:@"%.0fMP", [data[@"windSpeed"] floatValue]]];
+    
+    float rainProbability = 0.0;
+    if (data[@"precipProbability"]) {
+        rainProbability = [data[@"precipProbability"] floatValue] * 100.0;
+    }
+    
+    [cell.labelRain setText:[NSString stringWithFormat:@"%.0f%%", rainProbability]];
+    
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(80.0, 120.0);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0.0, 10.0, 0.0, 10.0);
 }
 
 @end

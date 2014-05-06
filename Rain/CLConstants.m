@@ -11,6 +11,7 @@
 #pragma mark User Defaults
 NSString * const CLRainUserDefaultsLocation = @"location";
 NSString * const CLRainUserDefaultsLocations = @"locations";
+NSString * const CLRainUserDefaultsTemperatureUnit = @"temperatureUnit";
 #pragma mark -
 #pragma mark Notifications
 NSString * const CLRainDidAddLocationNotification = @"com.mobileTuts.CLRainDidAddLocationNotification";

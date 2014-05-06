@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CLWeatherViewController">
             <connections>
                 <outlet property="buttonRefresh" destination="eKw-V9-CRw" id="Wdp-Es-JHS"/>
-                <outlet property="labelLocation" destination="rTm-Zz-2Yw" id="30i-Js-MjY"/>
+                <outlet property="collectionView" destination="IXL-c4-edN" id="xZ4-z9-5Vb"/>
+                <outlet property="labelDate" destination="rTm-Zz-2Yw" id="ZSn-Rh-g1g"/>
+                <outlet property="labelLocation" destination="jcd-qj-yVO" id="Ggh-Hc-wDl"/>
+                <outlet property="labelRain" destination="VoB-V9-fZ1" id="mRM-uW-oWw"/>
+                <outlet property="labelTemp" destination="w6v-IL-qdN" id="ZHD-0P-YfN"/>
+                <outlet property="labelTime" destination="ap8-UO-65R" id="sNg-Oc-GfR"/>
+                <outlet property="labelWind" destination="yL4-iG-l96" id="JwL-9F-mzz"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -16,27 +23,156 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTm-Zz-2Yw">
-                    <rect key="frame" x="20" y="20" width="280" height="21"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background-center.png" translatesAutoresizingMaskIntoConstraints="NO" id="VFJ-Uz-xXQ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PO-7A-Ie5">
+                    <rect key="frame" x="0.0" y="20" width="44" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0xP-4H-Pc6"/>
+                        <constraint firstAttribute="width" constant="44" id="c3r-Um-0Y8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="button-location-normal.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="openLeftView:" destination="-1" eventType="touchUpInside" id="DzE-oG-coI"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTm-Zz-2Yw">
+                    <rect key="frame" x="52" y="20" width="216" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKw-V9-CRw">
-                    <rect key="frame" x="124" y="49" width="72" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKw-V9-CRw">
+                    <rect key="frame" x="283" y="32" width="21" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Refresh">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="button-refresh-normal.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="refresh:" destination="-1" eventType="touchUpInside" id="4ej-86-f8o"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6v-IL-qdN">
+                    <rect key="frame" x="52" y="93" width="216" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="80"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-UO-65R">
+                    <rect key="frame" x="139" y="232" width="129" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcd-qj-yVO">
+                    <rect key="frame" x="52" y="201" width="216" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="mMw-Kh-4P5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wind" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL4-iG-l96">
+                    <rect key="frame" x="139" y="261" width="129" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoB-V9-fZ1">
+                    <rect key="frame" x="139" y="290" width="129" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8Tv-3i-13Q"/>
+                        <constraint firstAttribute="width" constant="129" id="gzq-ak-2ON"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IXL-c4-edN">
+                    <rect key="frame" x="0.0" y="401" width="320" height="167"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="167" id="jfr-2N-TG0"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="evj-ab-etT">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OPx-V6-IjB"/>
+                        <outlet property="delegate" destination="-1" id="6HH-ZT-wfu"/>
+                    </connections>
+                </collectionView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-clock.png" translatesAutoresizingMaskIntoConstraints="NO" id="SkO-MY-wk9">
+                    <rect key="frame" x="113" y="233" width="18" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-wind.png" translatesAutoresizingMaskIntoConstraints="NO" id="iDb-kd-RQb">
+                    <rect key="frame" x="113" y="262" width="18" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-rain.png" translatesAutoresizingMaskIntoConstraints="NO" id="dK1-Sd-wat">
+                    <rect key="frame" x="113" y="291" width="18" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2PO-7A-Ie5" firstAttribute="leading" secondItem="IXL-c4-edN" secondAttribute="leading" id="1ig-KV-0L7"/>
+                <constraint firstItem="2PO-7A-Ie5" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="4bN-Gw-Iic"/>
+                <constraint firstItem="jcd-qj-yVO" firstAttribute="leading" secondItem="w6v-IL-qdN" secondAttribute="leading" id="8c3-N8-HV7"/>
+                <constraint firstAttribute="bottom" secondItem="IXL-c4-edN" secondAttribute="bottom" id="A8G-3l-Po5"/>
+                <constraint firstItem="IXL-c4-edN" firstAttribute="centerX" secondItem="w6v-IL-qdN" secondAttribute="centerX" id="Avh-3J-Gop"/>
+                <constraint firstItem="jcd-qj-yVO" firstAttribute="top" secondItem="w6v-IL-qdN" secondAttribute="bottom" constant="8" symbolic="YES" id="ItV-pJ-Bw1"/>
+                <constraint firstItem="IXL-c4-edN" firstAttribute="trailing" secondItem="VFJ-Uz-xXQ" secondAttribute="trailing" id="KE6-yq-J1t"/>
+                <constraint firstItem="IXL-c4-edN" firstAttribute="centerX" secondItem="rTm-Zz-2Yw" secondAttribute="centerX" id="LO6-Ok-kPJ"/>
+                <constraint firstItem="2PO-7A-Ie5" firstAttribute="bottom" secondItem="rTm-Zz-2Yw" secondAttribute="bottom" id="OpP-fT-NJa"/>
+                <constraint firstItem="VoB-V9-fZ1" firstAttribute="leading" secondItem="ap8-UO-65R" secondAttribute="leading" id="RT0-xJ-HMj"/>
+                <constraint firstItem="2PO-7A-Ie5" firstAttribute="top" secondItem="rTm-Zz-2Yw" secondAttribute="top" id="S9i-EP-8kr"/>
+                <constraint firstItem="VoB-V9-fZ1" firstAttribute="leading" secondItem="dK1-Sd-wat" secondAttribute="trailing" constant="8" symbolic="YES" id="Vk6-bx-umX"/>
+                <constraint firstItem="IXL-c4-edN" firstAttribute="bottom" secondItem="VFJ-Uz-xXQ" secondAttribute="bottom" id="X3d-zb-nKt"/>
+                <constraint firstItem="VoB-V9-fZ1" firstAttribute="top" secondItem="yL4-iG-l96" secondAttribute="bottom" constant="8" symbolic="YES" id="ZpD-1N-qOy"/>
+                <constraint firstItem="2PO-7A-Ie5" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="b7L-5m-DbP"/>
+                <constraint firstItem="IXL-c4-edN" firstAttribute="centerX" secondItem="jcd-qj-yVO" secondAttribute="centerX" id="bks-QN-DDq"/>
+                <constraint firstItem="ap8-UO-65R" firstAttribute="top" secondItem="jcd-qj-yVO" secondAttribute="bottom" constant="10" id="etc-Yt-YpN"/>
+                <constraint firstItem="IXL-c4-edN" firstAttribute="leading" secondItem="VFJ-Uz-xXQ" secondAttribute="leading" id="gib-n1-UVP"/>
+                <constraint firstItem="jcd-qj-yVO" firstAttribute="top" secondItem="1" secondAttribute="top" constant="201" id="hQR-dd-u8O"/>
+                <constraint firstItem="jcd-qj-yVO" firstAttribute="trailing" secondItem="ap8-UO-65R" secondAttribute="trailing" id="iat-l4-0JN"/>
+                <constraint firstItem="rTm-Zz-2Yw" firstAttribute="leading" secondItem="2PO-7A-Ie5" secondAttribute="trailing" constant="8" symbolic="YES" id="q58-Zm-ELP"/>
+                <constraint firstItem="IXL-c4-edN" firstAttribute="top" secondItem="dK1-Sd-wat" secondAttribute="bottom" constant="90" id="qAD-z2-joH"/>
+                <constraint firstItem="VoB-V9-fZ1" firstAttribute="leading" secondItem="yL4-iG-l96" secondAttribute="leading" id="qck-4B-WpP"/>
+                <constraint firstItem="jcd-qj-yVO" firstAttribute="trailing" secondItem="VoB-V9-fZ1" secondAttribute="trailing" id="t7u-6U-Jk6"/>
+                <constraint firstItem="VoB-V9-fZ1" firstAttribute="bottom" secondItem="dK1-Sd-wat" secondAttribute="bottom" id="uwV-bH-qbf"/>
+                <constraint firstItem="jcd-qj-yVO" firstAttribute="trailing" secondItem="yL4-iG-l96" secondAttribute="trailing" id="xLu-CY-eXm"/>
+                <constraint firstItem="jcd-qj-yVO" firstAttribute="leading" secondItem="rTm-Zz-2Yw" secondAttribute="leading" id="zdI-JH-Yct"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="background-center.png" width="320" height="568"/>
+        <image name="button-location-normal.png" width="22" height="22"/>
+        <image name="button-refresh-normal.png" width="21" height="19"/>
+        <image name="icon-clock.png" width="18" height="20"/>
+        <image name="icon-rain.png" width="18" height="20"/>
+        <image name="icon-wind.png" width="18" height="20"/>
+    </resources>
 </document>

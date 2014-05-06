@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1FB30019181CEC0044D9DE /* NSUserDefaults+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1FB2FF19181CEC0044D9DE /* NSUserDefaults+Helpers.m */; };
+		3B1FB30319181FBA0044D9DE /* CLSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1FB30219181FBA0044D9DE /* CLSettings.m */; };
+		3B21D54B184E79C400F7440C /* background-add-location-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D530184E79C400F7440C /* background-add-location-cell.png */; };
+		3B21D54C184E79C400F7440C /* background-add-location-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D531184E79C400F7440C /* background-add-location-cell@2x.png */; };
+		3B21D54D184E79C400F7440C /* background-calendar-day-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D532184E79C400F7440C /* background-calendar-day-cell.png */; };
+		3B21D54E184E79C400F7440C /* background-calendar-day-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D533184E79C400F7440C /* background-calendar-day-cell@2x.png */; };
+		3B21D54F184E79C400F7440C /* background-center.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D534184E79C400F7440C /* background-center.png */; };
+		3B21D550184E79C400F7440C /* background-center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D535184E79C400F7440C /* background-center@2x.png */; };
+		3B21D551184E79C400F7440C /* background-hour-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D536184E79C400F7440C /* background-hour-cell.png */; };
+		3B21D552184E79C400F7440C /* background-hour-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D537184E79C400F7440C /* background-hour-cell@2x.png */; };
+		3B21D553184E79C400F7440C /* background-location-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D538184E79C400F7440C /* background-location-cell.png */; };
+		3B21D554184E79C400F7440C /* background-location-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D539184E79C400F7440C /* background-location-cell@2x.png */; };
+		3B21D555184E79C400F7440C /* button-delete-location-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D53A184E79C400F7440C /* button-delete-location-cell.png */; };
+		3B21D556184E79C400F7440C /* button-delete-location-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D53B184E79C400F7440C /* button-delete-location-cell@2x.png */; };
+		3B21D557184E79C400F7440C /* button-location-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D53C184E79C400F7440C /* button-location-normal.png */; };
+		3B21D558184E79C400F7440C /* button-location-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D53D184E79C400F7440C /* button-location-normal@2x.png */; };
+		3B21D559184E79C400F7440C /* button-refresh-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D53E184E79C400F7440C /* button-refresh-normal.png */; };
+		3B21D55A184E79C400F7440C /* button-refresh-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D53F184E79C400F7440C /* button-refresh-normal@2x.png */; };
+		3B21D55B184E79C400F7440C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D540184E79C400F7440C /* Default-568h@2x.png */; };
+		3B21D55C184E79C400F7440C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D541184E79C400F7440C /* Default.png */; };
+		3B21D55D184E79C400F7440C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D542184E79C400F7440C /* Default@2x.png */; };
+		3B21D55E184E79C400F7440C /* icon-add-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D543184E79C400F7440C /* icon-add-location.png */; };
+		3B21D55F184E79C400F7440C /* icon-add-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D544184E79C400F7440C /* icon-add-location@2x.png */; };
+		3B21D560184E79C400F7440C /* icon-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D545184E79C400F7440C /* icon-clock.png */; };
+		3B21D561184E79C400F7440C /* icon-clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D546184E79C400F7440C /* icon-clock@2x.png */; };
+		3B21D562184E79C400F7440C /* icon-rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D547184E79C400F7440C /* icon-rain.png */; };
+		3B21D563184E79C400F7440C /* icon-rain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D548184E79C400F7440C /* icon-rain@2x.png */; };
+		3B21D564184E79C400F7440C /* icon-wind.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D549184E79C400F7440C /* icon-wind.png */; };
+		3B21D565184E79C400F7440C /* icon-wind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B21D54A184E79C400F7440C /* icon-wind@2x.png */; };
 		3B6EFCB5180539EC0085EDF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6EFCB4180539EC0085EDF9 /* Foundation.framework */; };
 		3B6EFCB7180539EC0085EDF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6EFCB6180539EC0085EDF9 /* CoreGraphics.framework */; };
 		3B6EFCB9180539EC0085EDF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6EFCB8180539EC0085EDF9 /* UIKit.framework */; };
@@ -20,6 +49,8 @@
 		3B6EFCD8180539EC0085EDF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EFCD6180539EC0085EDF9 /* InfoPlist.strings */; };
 		3B6EFCDA180539EC0085EDF9 /* RainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EFCD9180539EC0085EDF9 /* RainTests.m */; };
 		3BA232481807CF5C00310887 /* CLForecastClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA232471807CF5C00310887 /* CLForecastClient.m */; };
+		3BE3AD591918CE3800FCEE6E /* CLHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3AD581918CE3800FCEE6E /* CLHourCell.m */; };
+		3BE3AD621918D8BC00FCEE6E /* CLDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3AD611918D8BC00FCEE6E /* CLDayCell.m */; };
 		3BF8DE591806801E003287EE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE581806801E003287EE /* MobileCoreServices.framework */; };
 		3BF8DE5B1806802E003287EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE5A1806802E003287EE /* SystemConfiguration.framework */; };
 		3BF8DE5D18068033003287EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE5C18068033003287EE /* QuartzCore.framework */; };
@@ -47,6 +78,37 @@
 /* Begin PBXFileReference section */
 		23183E55B29D466A99D00ABE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC6F2AC501848F5ABE11BC2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		3B1FB2FE19181CEC0044D9DE /* NSUserDefaults+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Helpers.h"; sourceTree = "<group>"; };
+		3B1FB2FF19181CEC0044D9DE /* NSUserDefaults+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Helpers.m"; sourceTree = "<group>"; };
+		3B1FB30119181FBA0044D9DE /* CLSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSettings.h; sourceTree = "<group>"; };
+		3B1FB30219181FBA0044D9DE /* CLSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSettings.m; sourceTree = "<group>"; };
+		3B21D530184E79C400F7440C /* background-add-location-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-add-location-cell.png"; sourceTree = "<group>"; };
+		3B21D531184E79C400F7440C /* background-add-location-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-add-location-cell@2x.png"; sourceTree = "<group>"; };
+		3B21D532184E79C400F7440C /* background-calendar-day-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-calendar-day-cell.png"; sourceTree = "<group>"; };
+		3B21D533184E79C400F7440C /* background-calendar-day-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-calendar-day-cell@2x.png"; sourceTree = "<group>"; };
+		3B21D534184E79C400F7440C /* background-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-center.png"; sourceTree = "<group>"; };
+		3B21D535184E79C400F7440C /* background-center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-center@2x.png"; sourceTree = "<group>"; };
+		3B21D536184E79C400F7440C /* background-hour-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-hour-cell.png"; sourceTree = "<group>"; };
+		3B21D537184E79C400F7440C /* background-hour-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-hour-cell@2x.png"; sourceTree = "<group>"; };
+		3B21D538184E79C400F7440C /* background-location-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-location-cell.png"; sourceTree = "<group>"; };
+		3B21D539184E79C400F7440C /* background-location-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-location-cell@2x.png"; sourceTree = "<group>"; };
+		3B21D53A184E79C400F7440C /* button-delete-location-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-delete-location-cell.png"; sourceTree = "<group>"; };
+		3B21D53B184E79C400F7440C /* button-delete-location-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-delete-location-cell@2x.png"; sourceTree = "<group>"; };
+		3B21D53C184E79C400F7440C /* button-location-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-location-normal.png"; sourceTree = "<group>"; };
+		3B21D53D184E79C400F7440C /* button-location-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-location-normal@2x.png"; sourceTree = "<group>"; };
+		3B21D53E184E79C400F7440C /* button-refresh-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-refresh-normal.png"; sourceTree = "<group>"; };
+		3B21D53F184E79C400F7440C /* button-refresh-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-refresh-normal@2x.png"; sourceTree = "<group>"; };
+		3B21D540184E79C400F7440C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3B21D541184E79C400F7440C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3B21D542184E79C400F7440C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3B21D543184E79C400F7440C /* icon-add-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-add-location.png"; sourceTree = "<group>"; };
+		3B21D544184E79C400F7440C /* icon-add-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-add-location@2x.png"; sourceTree = "<group>"; };
+		3B21D545184E79C400F7440C /* icon-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-clock.png"; sourceTree = "<group>"; };
+		3B21D546184E79C400F7440C /* icon-clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-clock@2x.png"; sourceTree = "<group>"; };
+		3B21D547184E79C400F7440C /* icon-rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-rain.png"; sourceTree = "<group>"; };
+		3B21D548184E79C400F7440C /* icon-rain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-rain@2x.png"; sourceTree = "<group>"; };
+		3B21D549184E79C400F7440C /* icon-wind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-wind.png"; sourceTree = "<group>"; };
+		3B21D54A184E79C400F7440C /* icon-wind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-wind@2x.png"; sourceTree = "<group>"; };
 		3B6EFCB1180539EC0085EDF9 /* Rain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6EFCB4180539EC0085EDF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B6EFCB6180539EC0085EDF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +127,10 @@
 		3B6EFCD9180539EC0085EDF9 /* RainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RainTests.m; sourceTree = "<group>"; };
 		3BA232461807CF5C00310887 /* CLForecastClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLForecastClient.h; sourceTree = "<group>"; };
 		3BA232471807CF5C00310887 /* CLForecastClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLForecastClient.m; sourceTree = "<group>"; };
+		3BE3AD571918CE3800FCEE6E /* CLHourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLHourCell.h; sourceTree = "<group>"; };
+		3BE3AD581918CE3800FCEE6E /* CLHourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLHourCell.m; sourceTree = "<group>"; };
+		3BE3AD601918D8BC00FCEE6E /* CLDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDayCell.h; sourceTree = "<group>"; };
+		3BE3AD611918D8BC00FCEE6E /* CLDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDayCell.m; sourceTree = "<group>"; };
 		3BF8DE581806801E003287EE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3BF8DE5A1806802E003287EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3BF8DE5C18068033003287EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -111,6 +177,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B21D52F184E796700F7440C /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				3B21D530184E79C400F7440C /* background-add-location-cell.png */,
+				3B21D531184E79C400F7440C /* background-add-location-cell@2x.png */,
+				3B21D532184E79C400F7440C /* background-calendar-day-cell.png */,
+				3B21D533184E79C400F7440C /* background-calendar-day-cell@2x.png */,
+				3B21D534184E79C400F7440C /* background-center.png */,
+				3B21D535184E79C400F7440C /* background-center@2x.png */,
+				3B21D536184E79C400F7440C /* background-hour-cell.png */,
+				3B21D537184E79C400F7440C /* background-hour-cell@2x.png */,
+				3B21D538184E79C400F7440C /* background-location-cell.png */,
+				3B21D539184E79C400F7440C /* background-location-cell@2x.png */,
+				3B21D53A184E79C400F7440C /* button-delete-location-cell.png */,
+				3B21D53B184E79C400F7440C /* button-delete-location-cell@2x.png */,
+				3B21D53C184E79C400F7440C /* button-location-normal.png */,
+				3B21D53D184E79C400F7440C /* button-location-normal@2x.png */,
+				3B21D53E184E79C400F7440C /* button-refresh-normal.png */,
+				3B21D53F184E79C400F7440C /* button-refresh-normal@2x.png */,
+				3B21D540184E79C400F7440C /* Default-568h@2x.png */,
+				3B21D541184E79C400F7440C /* Default.png */,
+				3B21D542184E79C400F7440C /* Default@2x.png */,
+				3B21D543184E79C400F7440C /* icon-add-location.png */,
+				3B21D544184E79C400F7440C /* icon-add-location@2x.png */,
+				3B21D545184E79C400F7440C /* icon-clock.png */,
+				3B21D546184E79C400F7440C /* icon-clock@2x.png */,
+				3B21D547184E79C400F7440C /* icon-rain.png */,
+				3B21D548184E79C400F7440C /* icon-rain@2x.png */,
+				3B21D549184E79C400F7440C /* icon-wind.png */,
+				3B21D54A184E79C400F7440C /* icon-wind@2x.png */,
+			);
+			name = Artwork;
+			sourceTree = "<group>";
+		};
 		3B6EFCA8180539EB0085EDF9 = {
 			isa = PBXGroup;
 			children = (
@@ -150,14 +250,23 @@
 		3B6EFCBA180539EC0085EDF9 /* Rain */ = {
 			isa = PBXGroup;
 			children = (
+				3B21D52F184E796700F7440C /* Artwork */,
 				3BF8DE6618068390003287EE /* View Controllers */,
 				3BF8DE6518068364003287EE /* Application Delegate */,
 				3B6EFCC6180539EC0085EDF9 /* Images.xcassets */,
 				3B6EFCBB180539EC0085EDF9 /* Supporting Files */,
 				3BF8DE7618074438003287EE /* CLConstants.h */,
 				3BF8DE7718074438003287EE /* CLConstants.m */,
+				3B1FB2FE19181CEC0044D9DE /* NSUserDefaults+Helpers.h */,
+				3B1FB2FF19181CEC0044D9DE /* NSUserDefaults+Helpers.m */,
+				3B1FB30119181FBA0044D9DE /* CLSettings.h */,
+				3B1FB30219181FBA0044D9DE /* CLSettings.m */,
 				3BA232461807CF5C00310887 /* CLForecastClient.h */,
 				3BA232471807CF5C00310887 /* CLForecastClient.m */,
+				3BE3AD571918CE3800FCEE6E /* CLHourCell.h */,
+				3BE3AD581918CE3800FCEE6E /* CLHourCell.m */,
+				3BE3AD601918D8BC00FCEE6E /* CLDayCell.h */,
+				3BE3AD611918D8BC00FCEE6E /* CLDayCell.m */,
 			);
 			path = Rain;
 			sourceTree = "<group>";
@@ -264,7 +373,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CL;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Chris Lam";
 				TargetAttributes = {
 					3B6EFCCB180539EC0085EDF9 = {
@@ -295,11 +404,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B21D55D184E79C400F7440C /* Default@2x.png in Resources */,
+				3B21D552184E79C400F7440C /* background-hour-cell@2x.png in Resources */,
+				3B21D55B184E79C400F7440C /* Default-568h@2x.png in Resources */,
+				3B21D555184E79C400F7440C /* button-delete-location-cell.png in Resources */,
+				3B21D559184E79C400F7440C /* button-refresh-normal.png in Resources */,
+				3B21D54C184E79C400F7440C /* background-add-location-cell@2x.png in Resources */,
+				3B21D557184E79C400F7440C /* button-location-normal.png in Resources */,
+				3B21D563184E79C400F7440C /* icon-rain@2x.png in Resources */,
+				3B21D54B184E79C400F7440C /* background-add-location-cell.png in Resources */,
+				3B21D54F184E79C400F7440C /* background-center.png in Resources */,
 				3B6EFCBF180539EC0085EDF9 /* InfoPlist.strings in Resources */,
 				3BF8DE751806845C003287EE /* CLWeatherViewController.xib in Resources */,
+				3B21D55A184E79C400F7440C /* button-refresh-normal@2x.png in Resources */,
+				3B21D561184E79C400F7440C /* icon-clock@2x.png in Resources */,
+				3B21D54E184E79C400F7440C /* background-calendar-day-cell@2x.png in Resources */,
+				3B21D550184E79C400F7440C /* background-center@2x.png in Resources */,
+				3B21D55C184E79C400F7440C /* Default.png in Resources */,
+				3B21D54D184E79C400F7440C /* background-calendar-day-cell.png in Resources */,
+				3B21D55F184E79C400F7440C /* icon-add-location@2x.png in Resources */,
+				3B21D564184E79C400F7440C /* icon-wind.png in Resources */,
+				3B21D562184E79C400F7440C /* icon-rain.png in Resources */,
+				3B21D565184E79C400F7440C /* icon-wind@2x.png in Resources */,
 				3BF8DE70180683E8003287EE /* CLLocationsViewController.xib in Resources */,
+				3B21D553184E79C400F7440C /* background-location-cell.png in Resources */,
+				3B21D554184E79C400F7440C /* background-location-cell@2x.png in Resources */,
 				3B6EFCC7180539EC0085EDF9 /* Images.xcassets in Resources */,
+				3B21D560184E79C400F7440C /* icon-clock.png in Resources */,
 				3BF8DE6B180683CF003287EE /* CLForecastViewController.xib in Resources */,
+				3B21D55E184E79C400F7440C /* icon-add-location.png in Resources */,
+				3B21D556184E79C400F7440C /* button-delete-location-cell@2x.png in Resources */,
+				3B21D558184E79C400F7440C /* button-location-normal@2x.png in Resources */,
+				3B21D551184E79C400F7440C /* background-hour-cell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,13 +487,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE3AD591918CE3800FCEE6E /* CLHourCell.m in Sources */,
 				3BF8DE7818074438003287EE /* CLConstants.m in Sources */,
+				3B1FB30019181CEC0044D9DE /* NSUserDefaults+Helpers.m in Sources */,
 				3B6EFCC1180539EC0085EDF9 /* main.m in Sources */,
 				3BF8DE6F180683E8003287EE /* CLLocationsViewController.m in Sources */,
 				3BA232481807CF5C00310887 /* CLForecastClient.m in Sources */,
 				3BF8DE6A180683CF003287EE /* CLForecastViewController.m in Sources */,
+				3B1FB30319181FBA0044D9DE /* CLSettings.m in Sources */,
 				3B6EFCC5180539EC0085EDF9 /* CLAppDelegate.m in Sources */,
 				3BF8DE741806845C003287EE /* CLWeatherViewController.m in Sources */,
+				3BE3AD621918D8BC00FCEE6E /* CLDayCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +543,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -442,7 +581,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -480,7 +618,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rain/Rain-Prefix.pch";
 				INFOPLIST_FILE = "Rain/Rain-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -494,7 +634,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rain/Rain-Prefix.pch";
 				INFOPLIST_FILE = "Rain/Rain-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -502,7 +644,6 @@
 		3B6EFCE1180539EC0085EDF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Rain.app/Rain";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -525,7 +666,6 @@
 		3B6EFCE2180539EC0085EDF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Rain.app/Rain";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

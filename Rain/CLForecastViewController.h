@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLForecastViewController : UIViewController
+@interface CLForecastViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property(weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
