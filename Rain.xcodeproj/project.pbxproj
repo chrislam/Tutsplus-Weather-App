@@ -42,7 +42,7 @@
 		3B6EFCBF180539EC0085EDF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EFCBD180539EC0085EDF9 /* InfoPlist.strings */; };
 		3B6EFCC1180539EC0085EDF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EFCC0180539EC0085EDF9 /* main.m */; };
 		3B6EFCC5180539EC0085EDF9 /* CLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EFCC4180539EC0085EDF9 /* CLAppDelegate.m */; };
-		3B6EFCC7180539EC0085EDF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EFCC6180539EC0085EDF9 /* Images.xcassets */; };
+		3B6EFCC7180539EC0085EDF9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EFCC6180539EC0085EDF9 /* Default.png */; };
 		3B6EFCCE180539EC0085EDF9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6EFCCD180539EC0085EDF9 /* XCTest.framework */; };
 		3B6EFCCF180539EC0085EDF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6EFCB4180539EC0085EDF9 /* Foundation.framework */; };
 		3B6EFCD0180539EC0085EDF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6EFCB8180539EC0085EDF9 /* UIKit.framework */; };
@@ -51,6 +51,7 @@
 		3BA232481807CF5C00310887 /* CLForecastClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA232471807CF5C00310887 /* CLForecastClient.m */; };
 		3BE3AD591918CE3800FCEE6E /* CLHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3AD581918CE3800FCEE6E /* CLHourCell.m */; };
 		3BE3AD621918D8BC00FCEE6E /* CLDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3AD611918D8BC00FCEE6E /* CLDayCell.m */; };
+		3BE3AD65191968F700FCEE6E /* CLLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3AD64191968F700FCEE6E /* CLLocationCell.m */; };
 		3BF8DE591806801E003287EE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE581806801E003287EE /* MobileCoreServices.framework */; };
 		3BF8DE5B1806802E003287EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE5A1806802E003287EE /* SystemConfiguration.framework */; };
 		3BF8DE5D18068033003287EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8DE5C18068033003287EE /* QuartzCore.framework */; };
@@ -119,7 +120,7 @@
 		3B6EFCC2180539EC0085EDF9 /* Rain-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rain-Prefix.pch"; sourceTree = "<group>"; };
 		3B6EFCC3180539EC0085EDF9 /* CLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAppDelegate.h; sourceTree = "<group>"; };
 		3B6EFCC4180539EC0085EDF9 /* CLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAppDelegate.m; sourceTree = "<group>"; };
-		3B6EFCC6180539EC0085EDF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3B6EFCC6180539EC0085EDF9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3B6EFCCC180539EC0085EDF9 /* RainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6EFCCD180539EC0085EDF9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3B6EFCD5180539EC0085EDF9 /* RainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RainTests-Info.plist"; sourceTree = "<group>"; };
@@ -131,6 +132,8 @@
 		3BE3AD581918CE3800FCEE6E /* CLHourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLHourCell.m; sourceTree = "<group>"; };
 		3BE3AD601918D8BC00FCEE6E /* CLDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDayCell.h; sourceTree = "<group>"; };
 		3BE3AD611918D8BC00FCEE6E /* CLDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDayCell.m; sourceTree = "<group>"; };
+		3BE3AD63191968F700FCEE6E /* CLLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationCell.h; sourceTree = "<group>"; };
+		3BE3AD64191968F700FCEE6E /* CLLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationCell.m; sourceTree = "<group>"; };
 		3BF8DE581806801E003287EE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3BF8DE5A1806802E003287EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3BF8DE5C18068033003287EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -253,7 +256,7 @@
 				3B21D52F184E796700F7440C /* Artwork */,
 				3BF8DE6618068390003287EE /* View Controllers */,
 				3BF8DE6518068364003287EE /* Application Delegate */,
-				3B6EFCC6180539EC0085EDF9 /* Images.xcassets */,
+				3B6EFCC6180539EC0085EDF9 /* Default.png */,
 				3B6EFCBB180539EC0085EDF9 /* Supporting Files */,
 				3BF8DE7618074438003287EE /* CLConstants.h */,
 				3BF8DE7718074438003287EE /* CLConstants.m */,
@@ -267,6 +270,8 @@
 				3BE3AD581918CE3800FCEE6E /* CLHourCell.m */,
 				3BE3AD601918D8BC00FCEE6E /* CLDayCell.h */,
 				3BE3AD611918D8BC00FCEE6E /* CLDayCell.m */,
+				3BE3AD63191968F700FCEE6E /* CLLocationCell.h */,
+				3BE3AD64191968F700FCEE6E /* CLLocationCell.m */,
 			);
 			path = Rain;
 			sourceTree = "<group>";
@@ -429,7 +434,7 @@
 				3BF8DE70180683E8003287EE /* CLLocationsViewController.xib in Resources */,
 				3B21D553184E79C400F7440C /* background-location-cell.png in Resources */,
 				3B21D554184E79C400F7440C /* background-location-cell@2x.png in Resources */,
-				3B6EFCC7180539EC0085EDF9 /* Images.xcassets in Resources */,
+				3B6EFCC7180539EC0085EDF9 /* Default.png in Resources */,
 				3B21D560184E79C400F7440C /* icon-clock.png in Resources */,
 				3BF8DE6B180683CF003287EE /* CLForecastViewController.xib in Resources */,
 				3B21D55E184E79C400F7440C /* icon-add-location.png in Resources */,
@@ -490,6 +495,7 @@
 				3BE3AD591918CE3800FCEE6E /* CLHourCell.m in Sources */,
 				3BF8DE7818074438003287EE /* CLConstants.m in Sources */,
 				3B1FB30019181CEC0044D9DE /* NSUserDefaults+Helpers.m in Sources */,
+				3BE3AD65191968F700FCEE6E /* CLLocationCell.m in Sources */,
 				3B6EFCC1180539EC0085EDF9 /* main.m in Sources */,
 				3BF8DE6F180683E8003287EE /* CLLocationsViewController.m in Sources */,
 				3BA232481807CF5C00310887 /* CLForecastClient.m in Sources */,
@@ -618,7 +624,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rain/Rain-Prefix.pch";
 				INFOPLIST_FILE = "Rain/Rain-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -634,7 +640,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rain/Rain-Prefix.pch";
 				INFOPLIST_FILE = "Rain/Rain-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

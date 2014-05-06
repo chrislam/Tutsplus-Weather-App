@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CLLocationsViewController">
             <connections>
-                <outlet property="editButton" destination="Fb0-gB-PiN" id="ipH-SK-vo1"/>
                 <outlet property="tableView" destination="WEX-D5-wM1" id="grw-nn-KF6"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -18,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WEX-D5-wM1">
-                    <rect key="frame" x="0.0" y="62" width="275" height="506"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -26,19 +25,6 @@
                         <outlet property="delegate" destination="-1" id="JIB-9h-gl3"/>
                     </connections>
                 </tableView>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R8P-Ii-Mev">
-                    <rect key="frame" x="0.0" y="18" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Locations" id="WzC-Yu-hiC">
-                            <barButtonItem key="leftBarButtonItem" title="Edit" id="Fb0-gB-PiN">
-                                <connections>
-                                    <action selector="editLocations:" destination="-1" id="Tlt-TA-Uaa"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
